@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LiveEdgeDetection.iml" filepath="$PROJECT_DIR$/LiveEdgeDetection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LiveEdgeDetection-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LiveEdgeDetection-app.iml" group="LiveEdgeDetection/app" />
+      <module fileurl="file://$PROJECT_DIR$/LiveEdgeDetection-master.iml" filepath="$PROJECT_DIR$/LiveEdgeDetection-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mobile_Programming-LiveEdgeDetection.iml" filepath="$PROJECT_DIR$/.idea/modules/Mobile_Programming-LiveEdgeDetection.iml" group="LiveEdgeDetection" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liveedgedetection/com.github.adityaarora1-liveedgedetection.iml" filepath="$PROJECT_DIR$/.idea/modules/liveedgedetection/com.github.adityaarora1-liveedgedetection.iml" group="LiveEdgeDetection/liveedgedetection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary340/com.github.adityaarora1-openCVLibrary340.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary340/com.github.adityaarora1-openCVLibrary340.iml" group="LiveEdgeDetection/openCVLibrary340" />
+      <module fileurl="file://$PROJECT_DIR$/liveedgedetection/liveedgedetection.iml" filepath="$PROJECT_DIR$/liveedgedetection/liveedgedetection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary340/openCVLibrary340.iml" filepath="$PROJECT_DIR$/openCVLibrary340/openCVLibrary340.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary343/openCVLibrary343.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary343/openCVLibrary343.iml" group="LiveEdgeDetection/openCVLibrary343" />
+    </modules>
+  </component>
+</project>
