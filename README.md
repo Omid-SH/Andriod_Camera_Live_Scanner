@@ -34,6 +34,6 @@ In this app you can scan multiple pictures, save each of them in your galley and
 
 ## Screenshots
 
-![App icon](https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/app_icon.jpg)
-![Camera Scanner App](https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/p37.jpg | width=100)
-![Ask name of the file from the user](https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/p39.jpg | width=100)
+<img src="https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/app_icon.jpg" width="200" height="200">
+<img src="https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/p37.jpg" width="400" height="700">
+<img src="https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/p39.jpg" width="400" height="700">
