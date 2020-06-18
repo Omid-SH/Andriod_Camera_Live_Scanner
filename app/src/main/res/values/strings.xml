@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Live Edge Detection Sample</string>
+    <string name="app_name">Camera Live Scanner</string>
     <string name="file_name_hint">Type your pdf file name ...</string>
 </resources>

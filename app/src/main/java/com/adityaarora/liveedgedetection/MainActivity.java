@@ -70,11 +70,14 @@ public class MainActivity extends AppCompatActivity {
         startScan();
     }
 
+    /* In this method we start ScanActivity */
     private void startScan() {
         Intent intent = new Intent(this, ScanActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
     }
 
+    /* When we get result of ScanActivity, we set the picture to our new scanned picture and
+    * add the image to our bitmap list.*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -92,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /* In this method we make pdf file based on images in available in bitmaps list. */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void createPdf(String filename) {
         try {
@@ -114,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
             // write the document content
 
-            File mediaStorageDir = new File(Environment.getExternalStorageDirectory(), "LiveEdgeFiles");
+            File mediaStorageDir = new File(Environment.getExternalStorageDirectory(), "CameraLiveScannerFiles");
             if (!mediaStorageDir.exists()) {
                 if (!mediaStorageDir.mkdirs()) {
                     Log.d("App", "failed to create directory");
@@ -153,20 +157,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /* Set image we want to show to the user */
     private void setImg(int index) {
         if(bitmaps.size() == 0) {
+            // no image available so we should scan !
             startScan();
         } else if(index < 0) {
+            // show first image and set currentImg to 0
             currentImg = 0;
             scannedImageView.setImageBitmap(bitmaps.get(currentImg));
         } else if(index >= bitmaps.size()) {
+            // show last image and set currentImg to last image index
             currentImg = bitmaps.size() - 1;
             scannedImageView.setImageBitmap(bitmaps.get(currentImg));
         } else {
+            // show proper image available at index
             currentImg = index;
             scannedImageView.setImageBitmap(bitmaps.get(currentImg));
         }
     }
+
+    /* Proper action listeners */
 
     public void movePrevious(View view) {
         setImg(currentImg - 1);
@@ -195,6 +206,12 @@ public class MainActivity extends AppCompatActivity {
         checkFilePermission(SAVE_PDF);
     }
 
+    private void saveImg() {
+        MediaStore.Images.Media.insertImage(getContentResolver(), bitmaps.get(currentImg), "Scan" , "Live_edge");
+        Toast.makeText(this,"Image saved in the gallery.", Toast.LENGTH_LONG).show();
+    }
+
+    /* If we have permission, we do proper action. Otherwise, we get permission.*/
     private void checkFilePermission (int action) {
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -234,7 +251,6 @@ public class MainActivity extends AppCompatActivity {
             else
                 saveImg();
         }
-
     }
 
     @Override
@@ -263,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText filename = dialogLayout.findViewById(R.id.file_name);
         new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Select your pdf file name")
-                .setMessage("Select your pdf file name. This file will be saved in LiveEdgeFiles directory.")
+                .setMessage("Select your pdf file name. This file will be saved in CameraLiveScannerFiles directory.")
                 .setPositiveButton("Set", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -279,11 +295,5 @@ public class MainActivity extends AppCompatActivity {
                 .setView(dialogLayout)
                 .show();
     }
-
-    private void saveImg() {
-        MediaStore.Images.Media.insertImage(getContentResolver(), bitmaps.get(currentImg), "Scan" , "Live_edge");
-        Toast.makeText(this,"Image saved in the gallery.", Toast.LENGTH_LONG).show();
-    }
-
 
 }
