@@ -1,9 +1,5 @@
-# MobileProgramming_CodeReadingProject_Android
+# Android Camera Live Scanner
 
-| StudentName | ID |
-| :---: | :---: |
-| AmirHoseinRostami | 96101635 |
-| OmidSharafi | 96101838 |
 
 The Report of code reading project is available [here.](https://github.com/Omid-SH/Mobile_CodeReading_Android/blob/master/Android_CodeReading_Project_Report.pdf)
 
